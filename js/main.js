@@ -21,12 +21,26 @@ function createCard(data) {
     data.products.forEach((products) => {
 
         let card = document.createElement("div")
-        card.classList.add("card")
+        card.classList.add("basket")
         console.log(card);
         card.innerHTML = `
+        <div class = "product__photo">
+        
+        <img src="${products.thumbnail}" alt=""><i class="fa-regular fa-heart"></i>
+        </div>
+        <div class="info">
 
-        <p>${products.description}</p>
-        <p>${products.category}</p>
+
+        <p>${products.title}</p>
+        <p ><i class="fa-solid fa-star"></i> ${products.discountPercentage}</p>
+        <p class = "product__desc">$${products.price}</p>
+        <p >${products.brand}</p>
+        <p>${products.sku}</p>
+        <div class="comment">
+        <del>${products.warrantyInformation}</del>
+             <p>${products.shippingInformation}</p>
+        </div>
+        </div>
         
         `
 

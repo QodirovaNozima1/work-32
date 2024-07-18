@@ -35,7 +35,7 @@ const IMAGES = [
     "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRSSp5dtS8AuZxu9pG9wlmsHuqvSn46ZXIKnA&s",
     "https://www.rhs.org.uk/getmedia/726ef587-1bc0-4b0c-b33d-8478e9f29a4f/Rose-Garden-Wyken.jpg?width=940&height=627&ext=.jpg",
     "https://t4.ftcdn.net/jpg/03/21/60/71/360_F_321607144_e0dnqrWJYkg8HNSfehxTFwFGJpKvalu5.jpg",
-    "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Rivers-of-the-World-Cover.jpg"
+    "https://img.traveltriangle.com/blog/wp-content/uploads/2018/11/Rivers-of-the-World-Cover.jpg",
 ]
 function createCard(data,index) {
     data.slice(0,8).forEach((users, index) => {
@@ -44,9 +44,9 @@ function createCard(data,index) {
         card.classList.add("cards")
         card.innerHTML = `
 
-        <div class = "cards__image item"
+        <div class = "cards__image"
         <img src = ${IMAGES[index]} alt = "">
-        
+        </div>
 
         <div class = "desc">
         <div class = "circle"></div>
@@ -55,7 +55,6 @@ function createCard(data,index) {
         <p>${users.email}</p>
         <p>${users.address.suite}</p>
         <p>${users.address.city}</p>
-        </div>
         </div>
 
 
